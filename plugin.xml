@@ -24,8 +24,7 @@
                 <param name="android-package" value="com.saltynarwhal.cordova.plugin.authorizeNetPlugin"/>
             </feature>
         </config-file>
-        <framework src="src/android/*.gradle" custom="true" type="gradleReference" />
-        <!--<framework src="src/android/libs/emv-anet-sdk.aar" custom="true" />-->
+        <framework src="src/android/libs/emv-anet-sdk.aar" custom="true" />
         <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
     </platform>
 </plugin>

@@ -26,5 +26,6 @@
         </config-file>
         <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
         <framework src="src/android/libs" custom="true" />
+        <framework src="src/android/*.gradle" custom="true" type="gradleReference" />
     </platform>
 </plugin>

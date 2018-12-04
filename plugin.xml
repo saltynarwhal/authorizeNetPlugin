@@ -26,5 +26,6 @@
         </config-file>
 
         <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
+        <resource-file src="src/android/libs/emv-anet-sdk.aar" target="libs/emv-anet-sdk.aar" />
     </platform>
 </plugin>

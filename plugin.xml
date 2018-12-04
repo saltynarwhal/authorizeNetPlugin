@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="authorize-net-plugin" version="0.0.1">
+    <name>authorizeNetPlugin</name>
+
+    <description>An Android Cordova plugin that allows users use the Authorize.Net semi-integrated in-person SDK</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,authorize.net,alert</keywords>
+    <repo>https://github.com/saltynarwhal/authorizeNetPlugin.git</repo>
+    <issue>https://github.com/saltynarwhal/authorizeNetPlugin</issue>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/authorizeNetPlugin.js" name="authorizeNetPlugin">
+        <clobbers target="window.plugins.authorizeNetPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="authorizeNetPlugin">
+                <param name="android-package" value="com.saltynarwhal.cordova.plugin.authorizeNetPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
+    </platform>
+</plugin>

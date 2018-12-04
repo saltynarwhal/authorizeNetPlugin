@@ -1,6 +1,7 @@
 /**
  */
 package com.saltynarwhal.cordova.plugin;
+package net.authorize;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaActivity;

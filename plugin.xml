@@ -7,7 +7,7 @@
     <description>An Android Cordova plugin that allows users use the Authorize.Net semi-integrated in-person SDK</description>
     <license>MIT</license>
 
-    <keywords>cordova,android,authorize.net,alert</keywords>
+    <keywords>cordova,android,authorize,processing</keywords>
     <repo>https://github.com/saltynarwhal/authorizeNetPlugin.git</repo>
     <issue>https://github.com/saltynarwhal/authorizeNetPlugin</issue>
 
@@ -25,5 +25,6 @@
             </feature>
         </config-file>
         <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
+        <resource-file src="emv-anet-sdk/emv-anet-sdk.aar" target="libs/emv-anet-sdk.aar" />
     </platform>
 </plugin>

@@ -13,10 +13,6 @@
     "url": "git+https://github.com/saltynarwhal/authorizeNetPlugin.git"
   },
   "keywords": [
-    "Toast",
-    "Notification",
-    "Message",
-    "Alert",
     "ecosystem:cordova",
     "cordova-android"
   ],
@@ -29,7 +25,7 @@
   "author": "Jordan Strong <jstrong@yesco.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/saltynarwhal/authorizeNetPlugin"
+    "url": "https://github.com/saltynarwhal/authorizeNetPlugin/"
   },
-  "homepage": "https://github.com/saltynarwhal/authorizeNetPlugin"
+  "homepage": "https://github.com/saltynarwhal/authorizeNetPlugin/"
 }

@@ -19,12 +19,12 @@
         <clobbers target="window.plugins.authorizeNetPlugin" />
     </js-module>
     <platform name="android">
-      <preference name="minSdkVersion" value="21" />
-      <preference name="targetSdkVersion" value="27" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="authorizeNetPlugin">
               <param name="android-package" value="com.saltynarwhal.cordova.plugin.authorizeNetPlugin"/>
             </feature>
+            <preference name="minSdkVersion" value="21" />
+            <preference name="targetSdkVersion" value="27" />
         </config-file>
         <edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
           <uses-sdk android:minSdkVersion="21" />

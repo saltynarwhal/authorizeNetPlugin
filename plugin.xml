@@ -26,9 +26,6 @@
             <preference name="minSdkVersion" value="21" />
             <preference name="targetSdkVersion" value="27" />
         </config-file>
-        <edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
-          <uses-sdk android:minSdkVersion="21" />
-        </edit-config>
         <framework src="com.android.support:appcompat-v7:26+" />
         <framework src="src/android/config.gradle" custom="true" type="gradleReference" />
         <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />

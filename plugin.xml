@@ -19,14 +19,19 @@
         <clobbers target="window.plugins.authorizeNetPlugin" />
     </js-module>
     <platform name="android">
+      <preference name="android-minSdkVersion" value="21" />
+      <preference name="android-targetSdkVersion" value="27" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="authorizeNetPlugin">
-                <param name="android-package" value="com.saltynarwhal.cordova.plugin.authorizeNetPlugin"/>
+              <param name="android-package" value="com.saltynarwhal.cordova.plugin.authorizeNetPlugin"/>
             </feature>
         </config-file>
-        <framework src="com.android.support:appcompat-v7:25.3.1" />
+        <edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+          <uses-sdk android:minSdkVersion="21" />
+        </edit-config>
+        <framework src="com.android.support:appcompat-v7:26+" />
         <framework src="src/android/config.gradle" custom="true" type="gradleReference" />
         <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
-        <resource-file src="emv-anet-sdk/emv-anet-sdk.aar" target="libs/emv-anet-sdk.aar" />
+        <lib-file src="src/android/libs/emv-anet-sdk.aar" arch="device" />
     </platform>
 </plugin>

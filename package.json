@@ -20,6 +20,10 @@
     {
       "name": "cordova",
       "version": ">=3.0.0"
+    },
+    {
+      "name": "android-sdk",
+      "version": "21"
     }
   ],
   "author": "Jordan Strong <jstrong@yesco.com>",

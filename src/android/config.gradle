@@ -7,6 +7,15 @@ repositories{
 
 dependencies {
   compile(name:'emv-anet-sdk', ext:'aar')
+  compile 'com.android.support:appcompat-v7:26.+'
+
+  android {
+
+        defaultConfig {
+            minSdkVersion 21
+            versionCode 1
+            versionName "1.0"
+        }
 }
 
 allprojects {

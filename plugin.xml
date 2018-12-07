@@ -26,7 +26,7 @@
             <preference name="minSdkVersion" value="21" />
             <preference name="targetSdkVersion" value="27" />
         </config-file>
-        <edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+        <edit-config file="AndroidManifest.xml" target="/*/" mode="merge">
           <uses-sdk android:minSdkVersion="21" />
         </edit-config>
         <framework src="com.android.support:appcompat-v7:26+" />

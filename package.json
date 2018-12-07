@@ -8,6 +8,12 @@
       "android"
     ]
   },
+  "preferences": {
+        "android": [{
+            "name": "android-minSdkVersion",
+            "value": 21
+        }]
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saltynarwhal/authorizeNetPlugin.git"

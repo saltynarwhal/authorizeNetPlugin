@@ -61,7 +61,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
       return true;
     }
 
-    callbackContext.error("Not found a method.");
+    callbackContext.error("No method found.");
     return true;
   }
 
@@ -112,7 +112,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
 
           if ((result.getSessionToken() != null) && (sessionTokenAuthentication != null)) {
               this.merchant.setMerchantAuthentication(sessionTokenAuthentication);
-              callbackContext.success("Login sucess.");
+              callbackContext.success("Login success.");
           }
       } catch (Exception ex) {
          callbackContext.error(ex.toString());
@@ -125,7 +125,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
   /* Create and Submit an EMV Transaction */
   public void createEMVTransaction(JSONArray args,final CallbackContext callbackContext){
     if (this.merchant == null) {
-      callbackContext.error("Not exists Merchant. Please login in.");
+      callbackContext.error("Merchant does not exist. Please login in.");
       return;
     }
 
@@ -134,7 +134,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
     String solutionID;
     try {
       JSONObject params = args.getJSONObject(0);
-      JSONArray itens = params.getJSONArray("itens");
+      JSONArray items = params.getJSONArray("items");
       solutionID = params.getString("solution_id");
       amount = new BigDecimal(params.getString("amount"));
       order.setTotalAmount(amount);

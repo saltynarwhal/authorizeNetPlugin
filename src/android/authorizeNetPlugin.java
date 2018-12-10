@@ -198,7 +198,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
 //items = itens
     try {
       JSONObject params = args.getJSONObject(0);
-      JSONArray items = params.getJSONArray("itens");
+      JSONArray items = params.getJSONArray("items");
       IDtechBlob = params.getString("id_tech_blob");
       DeviceInfo = params.getString("device_info");
       amount = new BigDecimal(params.getString("amount"));

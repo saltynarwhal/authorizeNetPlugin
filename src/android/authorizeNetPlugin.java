@@ -139,8 +139,8 @@ public class authorizeNetPlugin extends CordovaPlugin {
       amount = new BigDecimal(params.getString("amount"));
       order.setTotalAmount(amount);
 
-      for (int i = 0; i < itens.length(); i++) {
-        JSONObject row = itens.getJSONObject(i);
+      for (int i = 0; i < items.length(); i++) {
+        JSONObject row = items.getJSONObject(i);
 
         OrderItem item = OrderItem.createOrderItem();
         item.setItemId(row.getString("id"));
@@ -195,16 +195,17 @@ public class authorizeNetPlugin extends CordovaPlugin {
     BigDecimal amount;
     String DeviceInfo;
 
+//items = itens
     try {
       JSONObject params = args.getJSONObject(0);
-      JSONArray itens = params.getJSONArray("itens");
+      JSONArray items = params.getJSONArray("itens");
       IDtechBlob = params.getString("id_tech_blob");
       DeviceInfo = params.getString("device_info");
       amount = new BigDecimal(params.getString("amount"));
       order.setTotalAmount(amount);
 
-      for (int i = 0; i < itens.length(); i++) {
-        JSONObject row = itens.getJSONObject(i);
+      for (int i = 0; i < items.length(); i++) {
+        JSONObject row = items.getJSONObject(i);
 
         OrderItem item = OrderItem.createOrderItem();
         item.setItemId(row.getString("id"));

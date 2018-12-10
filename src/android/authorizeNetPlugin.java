@@ -176,7 +176,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
     };
 
     EMVTransaction emvTransaction = EMVTransactionManager.createEMVTransaction(this.merchant, amount);
-    emvTransaction.setEmvTransactionType(EMVTransactionType.GOODS);
+    emvTransaction.setEmvTransactionType(EMVTransactionType.SERVICES);
     emvTransaction.setOrder(order);
     emvTransaction.setSolutionID(solutionID);
 

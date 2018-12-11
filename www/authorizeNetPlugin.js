@@ -57,7 +57,7 @@ authorizeNetPlugin.install = function() {
   if (!window.plugins) {
     window.plugins = {};
   }
-  window.plugins.toastyPlugin = new authorizeNetPlugin();
-  return window.plugins.AuthorizeNetPlugin;
+  window.plugins.authorizeNetPlugin = new authorizeNetPlugin();
+  return window.plugins.authorizeNetPlugin;
 };
 cordova.addConstructor(authorizeNetPlugin.install);

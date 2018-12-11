@@ -1,7 +1,7 @@
 // Empty constructor
-function AuthorizeNetPlugin() {}
+function authorizeNetPlugin() {}
 
-AuthorizeNetPlugin.initMerchant = function(options, successCallback, errorCallback) {
+authorizeNetPlugin.initMerchant = function(options, successCallback, errorCallback) {
   if(options.environment != 'sandbox' &&
      options.environment != 'production'){
       throw new Error('Environment not valid. '+ options.environment );
@@ -16,7 +16,7 @@ AuthorizeNetPlugin.initMerchant = function(options, successCallback, errorCallba
     options.environment
   ];
 
-  cordova.exec(successCallback, errorCallback, 'AuthorizeNetPlugin', 'initMerchant', args);
+  cordova.exec(successCallback, errorCallback, 'authorizeNetPlugin', 'initMerchant', args);
 }
 //var PLUGIN_NAME = 'AuthorizeNetPlugin';
 
@@ -53,11 +53,11 @@ AuthorizeNetPlugin.initMerchant = function(options, successCallback, errorCallba
 //module.exports = AuthozizeNetPlugin;
 
 // Installation constructor that binds AuthorizeNetPlugin to window
-AuthorizeNetPlugin.install = function() {
+authorizeNetPlugin.install = function() {
   if (!window.plugins) {
     window.plugins = {};
   }
-  window.plugins.toastyPlugin = new AuthorizeNetPlugin();
+  window.plugins.toastyPlugin = new authorizeNetPlugin();
   return window.plugins.AuthorizeNetPlugin;
 };
-cordova.addConstructor(AuthorizeNetPlugin.install);
+cordova.addConstructor(authorizeNetPlugin.install);

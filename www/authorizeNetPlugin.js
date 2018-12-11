@@ -33,3 +33,13 @@ var AuthozizeNetPlugin = {
 };
 
 module.exports = AuthozizeNetPlugin;
+
+// Installation constructor that binds AuthorizeNetPlugin to window
+AuthozizeNetPlugin.install = function() {
+  if (!window.plugins) {
+    window.plugins = {};
+  }
+  window.plugins.toastyPlugin = new AuthozizeNetPlugin();
+  return window.plugins.toastyPlugin;
+};
+cordova.addConstructor(AuthozizeNetPlugin.install);

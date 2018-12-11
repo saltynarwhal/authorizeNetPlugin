@@ -3,7 +3,7 @@ function AuthorizeNetPlugin() {}
 
 var PLUGIN_NAME = 'AuthorizeNetPlugin';
 
-AuthozizeNetPlugin = {
+AuthorizeNetPlugin = {
   initMerchant: function(options, done, error) {
     if(options.environment != 'sandbox' &&
        options.environment != 'production'){
@@ -36,11 +36,11 @@ AuthozizeNetPlugin = {
 //module.exports = AuthozizeNetPlugin;
 
 // Installation constructor that binds AuthorizeNetPlugin to window
-AuthozizeNetPlugin.install = function() {
+AuthorizeNetPlugin.install = function() {
   if (!window.plugins) {
     window.plugins = {};
   }
-  window.plugins.toastyPlugin = new AuthozizeNetPlugin();
+  window.plugins.toastyPlugin = new AuthorizeNetPlugin();
   return window.plugins.AuthozizeNetPlugin;
 };
-cordova.addConstructor(AuthozizeNetPlugin.install);
+cordova.addConstructor(AuthorizeNetPlugin.install);

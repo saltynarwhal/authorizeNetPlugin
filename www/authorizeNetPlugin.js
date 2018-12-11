@@ -1,8 +1,9 @@
-var exec = require('cordova/exec');
+// Empty constructor
+function AuthorizeNetPlugin() {}
 
 var PLUGIN_NAME = 'AuthorizeNetPlugin';
 
-var AuthozizeNetPlugin = {
+AuthozizeNetPlugin = {
   initMerchant: function(options, done, error) {
     if(options.environment != 'sandbox' &&
        options.environment != 'production'){
@@ -18,13 +19,13 @@ var AuthozizeNetPlugin = {
       options.environment
     ];
 
-    exec(done, error, PLUGIN_NAME, 'initMerchant', args);
+    cordova.exec(done, error, PLUGIN_NAME, 'initMerchant', args);
   },
   createEMVTransaction: function(options, done, error) {
-    exec(done, error, PLUGIN_NAME, 'createEMVTransaction', [options]);
+    cordova.exec(done, error, PLUGIN_NAME, 'createEMVTransaction', [options]);
   },
   createNonEMVTransaction: function(options, done, error) {
-    exec(done, error, PLUGIN_NAME, 'createNonEMVTransaction', [options]);
+    cordova.exec(done, error, PLUGIN_NAME, 'createNonEMVTransaction', [options]);
   },
   Environment: {
     SANDBOX: 'sandbox',
@@ -32,7 +33,7 @@ var AuthozizeNetPlugin = {
   }
 };
 
-module.exports = AuthozizeNetPlugin;
+//module.exports = AuthozizeNetPlugin;
 
 // Installation constructor that binds AuthorizeNetPlugin to window
 AuthozizeNetPlugin.install = function() {
@@ -40,6 +41,6 @@ AuthozizeNetPlugin.install = function() {
     window.plugins = {};
   }
   window.plugins.toastyPlugin = new AuthozizeNetPlugin();
-  return window.plugins.toastyPlugin;
+  return window.plugins.AuthozizeNetPlugin;
 };
 cordova.addConstructor(AuthozizeNetPlugin.install);

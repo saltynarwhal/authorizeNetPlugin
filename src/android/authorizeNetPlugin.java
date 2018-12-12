@@ -39,13 +39,13 @@ import net.authorize.mobile.Transaction;
 
 import java.math.BigDecimal;
 
-public class authorizeNetPlugin extends CordovaPlugin {
-  private static final String TAG = "authorizeNetPlugin";
+public class AuthorizeNetPlugin extends CordovaPlugin {
+  private static final String TAG = "AuthorizeNetPlugin";
   private static Merchant merchant;
 
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     super.initialize(cordova, webView);
-    Log.d(TAG, "Initializing authozizeNetPlugin");
+    Log.d(TAG, "Initializing AuthorizeNetPlugin");
   }
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {

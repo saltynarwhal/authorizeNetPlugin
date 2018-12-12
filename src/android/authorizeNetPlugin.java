@@ -90,6 +90,7 @@ public class AuthorizeNetPlugin extends CordovaPlugin {
     String environment = args.getString(5);
 
 
+
     PasswordAuthentication passAuth = PasswordAuthentication
       .createMerchantAuthentication(username, password, deviceID);
 

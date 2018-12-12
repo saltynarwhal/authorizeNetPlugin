@@ -31,7 +31,7 @@
         </edit-config>
         <framework src="com.android.support:appcompat-v7:26+" />
         <framework src="src/android/config.gradle" custom="true" type="gradleReference" />
-        <source-file src="src/android/authorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
+        <source-file src="src/android/AuthorizeNetPlugin.java" target-dir="src/com/saltynarwhal/cordova/plugin" />
         <lib-file src="src/android/libs/emv-anet-sdk.aar" arch="device" />
     </platform>
 </plugin>

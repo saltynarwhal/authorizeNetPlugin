@@ -1,19 +1,19 @@
 // Empty constructor
 function authorizeNetPlugin() {}
 
-authorizeNetPlugin.prototype.initMerchant = function(options, successCallback, errorCallback) {
-  if(options.environment != 'sandbox' &&
-     options.environment != 'production'){
+authorizeNetPlugin.prototype.initMerchant = function(InitObject, successCallback, errorCallback) {
+  if(InitObject.environment != 'sandbox' &&
+     InitObject.environment != 'production'){
       throw new Error('Environment not valid. '+ options.environment );
   }
 
   var args = [
-    options.device_id,
-    options.device_description,
-    options.device_number,
-    options.username,
-    options.password,
-    options.environment
+    InitObject.device_id,
+    InitObject.device_description,
+    InitObject.device_number,
+    InitObject.username,
+    InitObject.password,
+    InitObject.environment
   ];
 
   cordova.exec(successCallback, errorCallback, 'authorizeNetPlugin', 'initMerchant', args);

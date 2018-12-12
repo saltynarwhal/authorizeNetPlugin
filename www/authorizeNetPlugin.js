@@ -4,7 +4,7 @@ function authorizeNetPlugin() {}
 authorizeNetPlugin.prototype.initMerchant = function(InitObject, successCallback, errorCallback) {
   if(InitObject.environment != 'sandbox' &&
      InitObject.environment != 'production'){
-      throw new Error('Environment not valid. '+ options.environment );
+      throw new Error('Environment not valid. '+ InitObject.environment );
   }
 
   var args = [

@@ -27,6 +27,7 @@ import net.authorize.aim.emv.EMVTransaction;
 import net.authorize.aim.emv.EMVTransactionManager;
 import net.authorize.aim.emv.EMVTransactionManager.EMVTransactionListener;
 import net.authorize.aim.emv.EMVTransactionType;
+import net.authorize.aim.emv.EMVActivity;
 import net.authorize.auth.PasswordAuthentication;
 import net.authorize.auth.SessionTokenAuthentication;
 import net.authorize.data.Order;

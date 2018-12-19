@@ -5,6 +5,8 @@ repositories{
    }
 }
 
+include ':app', ':emv-anet-sdk'
+
 dependencies {
   compile (name:'emv-anet-sdk', ext:'aar')
   compile 'com.android.support:appcompat-v7:25.3.1'

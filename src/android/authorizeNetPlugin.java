@@ -181,7 +181,7 @@ public class authorizeNetPlugin extends CordovaPlugin {
     emvTransaction.setOrder(order);
     emvTransaction.setSolutionID(solutionID);
 
-    EMVTransactionManager.startEMVTransaction(emvTransaction, iemvTransaction, cordova.getActivity());
+    EMVTransactionManager.startEMVTransaction(emvTransaction, iemvTransaction, cordova.getActivity().getApplicationContext());
   }
 
   /* Create Non-EMV transaction Using Encrypted Swiper Data */

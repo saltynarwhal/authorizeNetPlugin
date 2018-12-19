@@ -19,11 +19,11 @@ authorizeNetPlugin.prototype.initMerchant = function(InitObject, successCallback
   cordova.exec(successCallback, errorCallback, 'authorizeNetPlugin', 'initMerchant', args);
 }
 
-authorizeNetPlugin.createEMVTransaction = function(options, successCallback, errorCallback) {
+authorizeNetPlugin.prototype.createEMVTransaction = function(options, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, 'authorizeNetPlugin', 'createEMVTransaction', [options]);
 }
 
-authorizeNetPlugin.createNonEMVTransaction = function(options, successCallback, errorCallback) {
+authorizeNetPlugin.prototype.createNonEMVTransaction = function(options, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, 'authorizeNetPlugin', 'createNonEMVTransaction', [options]);
 }
 

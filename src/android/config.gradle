@@ -5,6 +5,8 @@ repositories{
    }
 }
 
+android.enableAapt2=false
+SUPPORT_LIBS_VER = '27.0.2'
 
 dependencies {
   compile (name:'emv-anet-sdk', ext:'aar')

@@ -5,7 +5,7 @@ repositories{
    }
 }
 
-android.enableAapt2=false
+
 
 dependencies {
   compile (name:'emv-anet-sdk', ext:'aar')
@@ -19,6 +19,7 @@ dependencies {
             versionCode 1
             versionName "1.0"
         }
+        android.enableAapt2=false
   }
 }
 

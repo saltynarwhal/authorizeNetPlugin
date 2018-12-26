@@ -22,7 +22,6 @@ import net.authorize.Merchant;
 import net.authorize.TransactionType;
 import net.authorize.aim.cardpresent.DeviceType;
 import net.authorize.aim.cardpresent.MarketType;
-import net.authorize.aim.emv.iF;
 import net.authorize.aim.emv.EMVErrorCode;
 import net.authorize.aim.emv.EMVTransaction;
 import net.authorize.aim.emv.EMVTransactionManager;
